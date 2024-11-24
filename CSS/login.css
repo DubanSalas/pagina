@@ -1,0 +1,182 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-popup {
+    background-color: #fff;
+    width: 380px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid #ddd; /* Línea de borde */
+    border-top: 3px solid #ffcc00; /* Línea superior amarilla */
+    border-bottom: 3px solid #ffcc00; /* Línea inferior amarilla */
+}
+
+.login-header {
+    display: flex;
+    justify-content: center; /* Centrado del texto */
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.header-text {
+    text-align: center; /* Centrado del texto "¿Deseas comprar o seguir navegando?" */
+    font-size: 14px;
+    color: #666;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+}
+
+.login-content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.google-btn, .facebook-btn {
+    padding: 12px 18px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.google-btn {
+    background-color: #db4437;
+    color: white;
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: white;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+span {
+    display: block;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #666;
+    position: relative;
+    padding: 0 20px; /* Agrega espacio alrededor del texto */
+}
+
+.line-with-text {
+    font-size: 14px;
+    color: #666;
+    display: inline-block; /* Hace que las líneas se ajusten al texto */
+    position: relative;
+    padding-left: 100px;  /* Espacio para la línea a la izquierda */
+    padding-right: 100px; /* Espacio para la línea a la derecha */
+}
+
+.line-with-text::before,
+.line-with-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%; /* Tamaño de las líneas, 30% del tamaño del texto */
+    height: 1px;
+    background-color: #ddd; /* Color de las líneas */
+    transform: translateY(-50%);
+}
+
+.line-with-text::before {
+    left: 0;
+}
+
+.line-with-text::after {
+    right: 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.input-group input {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e6b800;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}

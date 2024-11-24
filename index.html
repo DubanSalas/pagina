@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noticia</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+
+<body>
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <ul>
+            <li><a href="#">Últimas Noticias</a></li>
+            <li><a href="#">Actualidad</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Tecnología</a></li>
+            <li><a href="#">Más</a></li>
+            <li><a href="#">Sintoniza tu región</a></li>
+            <li><a href="#">Podcasts</a></li>
+            <!-- Agregar "Iniciar sesión" -->
+            <li><a href="/Login.html">Iniciar sesión</a></li> <!-- Redirige a la página de inicio de sesión -->
+        </ul>
+    </div>
+   
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="header-left">
+            <!-- Botón de menú -->
+            <button class="menu-button" onclick="toggleMenu()">☰ Menú</button>
+            <!-- Buscar -->
+            <form class="search-form" onsubmit="performSearch(event)">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button type="submit"></button>
+            </form>
+        </div>
+        <div class="header-center">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="circle"></div>
+                <span>RPP</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <!-- En vivo -->
+            <button class="live-button">
+                <img src="https://via.placeholder.com/40" alt="Audio" class="live-icon">
+                <div class="live-text">
+                    <span>En vivo</span>
+                    <strong>Noticia</strong>
+                </div>
+                <div class="play-button">▶</div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menú lateral -->
+    <div id="side-menu" class="side-menu">
+        <div class="menu-header">
+            <button class="close-button" onclick="toggleMenu()">✖</button>
+        </div>
+        <div class="menu-content">
+            <!-- Logo centrado -->
+            <div class="menu-logo">
+                <div class="circle"></div>
+                <span>RPP</span>
+            </div>
+
+            <!-- Texto centrado de redes sociales -->
+            <div class="social-section">
+                <p>Síguenos en redes sociales</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon tiktok">🎵</a>
+                    <a href="#" class="social-icon instagram">📸</a>
+                    <a href="#" class="social-icon facebook">📘</a>
+                    <a href="#" class="social-icon youtube">🎥</a>
+                </div>
+            </div>
+
+            <!-- Botones de WhatsApp -->
+            <button class="whatsapp-button">🟢 Únete a nuestro canal en WhatsApp</button>
+            <button class="sports-button">🔵 Únete a nuestro canal de Deportes</button>
+
+            <!-- Secciones con fondo gris solo hasta Fútbol -->
+            <div class="sections-box">
+                <h3>Secciones</h3>
+                <ul class="sections-list">
+                    <li>Últimas noticias <span class="arrow">›</span></li>
+                    <li>Política <span class="arrow">›</span></li>
+                    <li>Lima <span class="arrow">›</span></li>
+                    <li>Perú <span class="arrow">›</span></li>
+                    <li>Fútbol <span class="arrow">›</span></li>
+                </ul>
+            </div>
+
+            <!-- Secciones sin fondo gris -->
+            <ul class="sections-list">
+                <li>Otras noticias <span class="arrow">›</span></li>
+                <li>Internacionales <span class="arrow">›</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Calendario -->
+    <aside class="calendar-container">
+        <h3>Fechas anteriores</h3>
+        <div class="calendar-header">
+            <select id="month-selector"></select>
+            <select id="year-selector"></select>
+        </div>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>S</th>
+                    <th>D</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+        </table>
+    </aside>
+
+    <!-- Título "Archivo" -->
+    <h2 class="archivo-title">Archivo</h2>
+
+    <!-- Contenedor de los artículos -->
+    <div class="article-container">
+        <!-- Primer cuadro -->
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Imagen 1" class="article-image">
+            <div class="article-text">
+                <h2>Título del artículo 1</h2>
+                <p>Descripción breve del artículo 1.</p>
+                <p class="article-time">Hace 42 minutos</p>
+                <a href="#" class="article-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Segundo cuadro -->
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Imagen 2" class="article-image">
+            <div class="article-text">
+                <h2>Título del artículo 2</h2>
+                <p>Descripción breve del artículo 2.</p>
+                <p class="article-time">Hace 1 hora</p>
+                <a href="#" class="article-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Tercer cuadro -->
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Imagen 3" class="article-image">
+            <div class="article-text">
+                <h2>Título del artículo 3</h2>
+                <p>Descripción breve del artículo 3.</p>
+                <p class="article-time">Hace 2 horas</p>
+                <a href="#" class="article-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Cuarto cuadro -->
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Imagen 4" class="article-image">
+            <div class="article-text">
+                <h2>Título del artículo 4</h2>
+                <p>Descripción breve del artículo 4.</p>
+                <p class="article-time">Hace 3 horas</p>
+                <a href="#" class="article-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Quinto cuadro -->
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Imagen 5" class="article-image">
+            <div class="article-text">
+                <h2>Título del artículo 5</h2>
+                <p>Descripción breve del artículo 5.</p>
+                <p class="article-time">Hace 4 horas</p>
+                <a href="#" class="article-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Sexto cuadro -->
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Imagen 6" class="article-image">
+            <div class="article-text">
+                <h2>Título del artículo 6</h2>
+                <p>Descripción breve del artículo 6.</p>
+                <p class="article-time">Hace 5 horas</p>
+                <a href="#" class="article-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Artículos ocultos que aparecerán cuando se haga clic en el botón -->
+        <div id="more-articles" class="hidden">
+            <!-- Séptimo cuadro -->
+            <div class="article">
+                <img src="https://via.placeholder.com/150" alt="Imagen 7" class="article-image">
+                <div class="article-text">
+                    <h2>Título del artículo 7</h2>
+                    <p>Descripción breve del artículo 7.</p>
+                    <p class="article-time">Hace 6 horas</p>
+                    <a href="#" class="article-more">Leer más</a>
+                </div>
+            </div>
+
+            <!-- Octavo cuadro -->
+            <div class="article">
+                <img src="https://via.placeholder.com/150" alt="Imagen 8" class="article-image">
+                <div class="article-text">
+                    <h2>Título del artículo 8</h2>
+                    <p>Descripción breve del artículo 8.</p>
+                    <p class="article-time">Hace 7 horas</p>
+                    <a href="#" class="article-more">Leer más</a>
+                </div>
+            </div>
+
+            <!-- Noveno cuadro -->
+            <div class="article">
+                <img src="https://via.placeholder.com/150" alt="Imagen 9" class="article-image">
+                <div class="article-text">
+                    <h2>Título del artículo 9</h2>
+                    <p>Descripción breve del artículo 9.</p>
+                    <p class="article-time">Hace 8 horas</p>
+                    <a href="#" class="article-more">Leer más</a>
+                </div>
+            </div>
+
+            <!-- Décimo cuadro -->
+            <div class="article">
+                <img src="https://via.placeholder.com/150" alt="Imagen 10" class="article-image">
+                <div class="article-text">
+                    <h2>Título del artículo 10</h2>
+                    <p>Descripción breve del artículo 10.</p>
+                    <p class="article-time">Hace 9 horas</p>
+                    <a href="#" class="article-more">Leer más</a>
+                </div>
+            </div>
+
+            <!-- Undécimo cuadro -->
+            <div class="article">
+                <img src="https://via.placeholder.com/150" alt="Imagen 11" class="article-image">
+                <div class="article-text">
+                    <h2>Título del artículo 11</h2>
+                    <p>Descripción breve del artículo 11.</p>
+                    <p class="article-time">Hace 10 horas</p>
+                    <a href="#" class="article-more">Leer más</a>
+                </div>
+            </div>
+
+            <!-- Duodécimo cuadro -->
+            <div class="article">
+                <img src="https://via.placeholder.com/150" alt="Imagen 12" class="article-image">
+                <div class="article-text">
+                    <h2>Título del artículo 12</h2>
+                    <p>Descripción breve del artículo 12.</p>
+                    <p class="article-time">Hace 11 horas</p>
+                    <a href="#" class="article-more">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón "Ver más noticias" -->
+    <div class="more-news-container">
+        <button id="load-more-btn" class="load-more-btn">Ver más noticias</button>
+    </div>
+
+        <!-- Noticia" -->
+
+    <div class="news-container">
+        <h1>En el mundo</h1>
+        <div class="news-grid">
+            <!-- Noticia 1 -->
+            <div class="news-item">
+                <img src="exmilitar.jpg" alt="Exmilitar español">
+                <h2>El exmilitar español que espió a Assange falseó pruebas y correos en su defensa</h2>
+                <p class="author">JOSE MARÍA IRUJO | Madrid</p>
+            </div>
+            <!-- Noticia 2 -->
+            <div class="news-item">
+                <h2>Las nueve horas que acabaron con la puesta en libertad del empresario Aldama, quien agita al Gobierno español</h2>
+                <p class="description">El rápido movimiento del abogado defensor, apoyado por la Fiscalía Anticorrupción, precipitó la salida del empresario de la cárcel.</p>
+                <p class="author">J. J. GÁLVEZ | Madrid</p>
+            </div>
+            <!-- Noticia 3 -->
+            <div class="news-item">
+                <img src="universitarios.jpg" alt="Universitarios colombianos">
+                <h2>Más de 200.000 universitarios exigen al Gobierno de Colombia que desembolse los créditos que les permitirán estudiar</h2>
+                <p class="author">CAMILA OSORIO | Bogotá</p>
+            </div>
+            <!-- Noticia 4 -->
+            <div class="news-item">
+                <h2>El avance imparable del dengue en México: el virus estalla en dos Estados clave</h2>
+                <p class="description">Hay más de 110.000 pacientes confirmados y 262 defunciones a causa de esta infección transmitida por los mosquitos 'aedes aegypti', que están llegando de forma acelerada a nuevos Estados.</p>
+                <p class="author">BEATRIZ GUILLÉN | México</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="/JS/script.js"></script>
+</body>
+</html>

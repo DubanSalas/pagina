@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noticia</title>
+    <link rel="stylesheet" href="/CSS/actualidad.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+
+<body>
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <ul>
+            <li><a href="#">Últimas Noticias</a></li>
+            <li><a href="#">Actualidad</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Tecnología</a></li>
+            <li><a href="#">Más</a></li>
+            <li><a href="#">Sintoniza tu región</a></li>
+            <li><a href="#">Podcasts</a></li>
+            <!-- Agregar "Iniciar sesión" -->
+            <li><a href="/Login.html">Iniciar sesión</a></li> <!-- Redirige a la página de inicio de sesión -->
+        </ul>
+    </div>
+   
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="header-left">
+            <!-- Botón de menú -->
+            <button class="menu-button" onclick="toggleMenu()">☰ Menú</button>
+            <!-- Buscar -->
+            <form class="search-form" onsubmit="performSearch(event)">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button type="submit"></button>
+            </form>
+        </div>
+        <div class="header-center">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="circle"></div>
+                <span>RPP</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <!-- En vivo -->
+            <button class="live-button">
+                <img src="https://via.placeholder.com/40" alt="Audio" class="live-icon">
+                <div class="live-text">
+                    <span>En vivo</span>
+                    <strong>Noticia</strong>
+                </div>
+                <div class="play-button">▶</div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menú lateral -->
+    <div id="side-menu" class="side-menu">
+        <div class="menu-header">
+            <button class="close-button" onclick="toggleMenu()">✖</button>
+        </div>
+        <div class="menu-content">
+            <!-- Logo centrado -->
+            <div class="menu-logo">
+                <div class="circle"></div>
+                <span>RPP</span>
+            </div>
+
+            <!-- Texto centrado de redes sociales -->
+            <div class="social-section">
+                <p>Síguenos en redes sociales</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon tiktok">🎵</a>
+                    <a href="#" class="social-icon instagram">📸</a>
+                    <a href="#" class="social-icon facebook">📘</a>
+                    <a href="#" class="social-icon youtube">🎥</a>
+                </div>
+            </div>
+
+            <!-- Botones de WhatsApp -->
+            <button class="whatsapp-button">🟢 Únete a nuestro canal en WhatsApp</button>
+            <button class="sports-button">🔵 Únete a nuestro canal de Deportes</button>
+
+            <!-- Secciones con fondo gris solo hasta Fútbol -->
+            <div class="sections-box">
+                <h3>Secciones</h3>
+                <ul class="sections-list">
+                    <li>Últimas noticias <span class="arrow">›</span></li>
+                    <li>Política <span class="arrow">›</span></li>
+                    <li>Lima <span class="arrow">›</span></li>
+                    <li>Perú <span class="arrow">›</span></li>
+                    <li>Fútbol <span class="arrow">›</span></li>
+                </ul>
+            </div>
+
+            <!-- Secciones sin fondo gris -->
+            <ul class="sections-list">
+                <li>Otras noticias <span class="arrow">›</span></li>
+                <li>Internacionales <span class="arrow">›</span></li>
+            </ul>
+        </div>
+    </div>
+
+    
+  <div class="container">
+    <header class="header">
+      <h2>Actualidad</h2>
+    </header>
+    <section class="news">
+      <div class="news-image">
+        <img src="imagen-ejemplo.jpg" alt="Noticia relevante">
+      </div>
+      <div class="news-content">
+        <h3>Más del 80 % a favor de declarar imputables a menores de 16 y 17 años por delitos graves, según encuesta de CPI</h3>
+        <p>Un 41 % de entrevistados se mostró “muy de acuerdo” con la normativa, mientras que un 42.8 % dijo estar “de acuerdo” con el dictamen. Hasta un 56.3 % de peruanos dijo sentir “mucha delincuencia” en la ciudad donde reside, de acuerdo con la encuesta de CPI, presentada en exclusiva en RPP.</p>
+        <button class="listen-button">Escuchar · 22:23</button>
+      </div>
+    </section>
+  </div>
+
+    <!-- Descripción -->
+
+  <section class="news-section">
+    <div class="news-row">
+      <div class="news-card">
+        <img src="imagen1.jpg" alt="Noticia 1">
+        <div class="news-details">
+          <p class="category">Policiales</p>
+          <h3>Puente Piedra: allanan local clandestino que adulteraba vinos de reconocidas marcas</h3>
+          <p class="author">por Wendy Milla Loo · 13:00 hs</p>
+          <a href="noticia1.html" class="listen-button">Escuchar · 01:32</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <img src="imagen2.jpg" alt="Noticia 2">
+        <div class="news-details">
+          <p class="category">Policiales</p>
+          <h3>Delincuentes a bordo de una moto asesinan a balazos a chofer de empresa El Rápido y hieren a dos pasajeros</h3>
+          <p class="author">por Luis Felipe Rodríguez Jimenez · 11:55 hs</p>
+          <a href="noticia2.html" class="listen-button">Escuchar · 01:21</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <img src="imagen3.jpg" alt="Noticia 3">
+        <div class="news-details">
+          <p class="category">Policiales</p>
+          <h3>Un hombre fue baleado y quemado en asentamiento humano del Cercado de Lima [VIDEO]</h3>
+          <p class="author">por Freddy Chávarry · 09:00 hs</p>
+          <a href="noticia3.html" class="listen-button">Escuchar · 01:15</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Video destacado -->
+
+    <section class="videos-section">
+        <h2>Videos Imperdibles</h2>
+    
+        <!-- Contenedor de los videos -->
+        <div class="videos-container">
+          
+          <!-- Video Principal -->
+          <div class="video-principal">
+            <a href="https://www.ejemplo1.com"> <!-- Enlace al video principal -->
+              <div class="video-thumbnail">
+                <img src="video-destacado.jpg" alt="Video Principal">
+                <div class="play-button">
+                  <img src="play-icon.png" alt="Reproducir">
+                </div>
+              </div>
+              <div class="video-info">
+                <p class="video-duration">00:58</p>
+                <h3>Municipalidad de Lima requirió a la Fiscalía que pida al PJ la suspensión del cobro de peaje de Rutas de Lima</h3>
+                <p class="video-author">Wilber Medina, abogado de la Municipalidad de Lima.</p>
+              </div>
+            </a>
+          </div>
+    
+          <!-- Videos al costado -->
+          <div class="video-list">
+            <div class="video-card">
+              <a href="https://www.ejemplo2.com">
+                <div class="video-thumbnail">
+                  <img src="video1.jpg" alt="Video 1">
+                  <div class="play-button">
+                    <img src="play-icon.png" alt="Reproducir">
+                  </div>
+                </div>
+                <div class="video-info">
+                  <p class="video-title">Abogado de familiares de Sheyla Córdova señala que tres policías estarían involucrados</p>
+                </div>
+              </a>
+            </div>
+    
+            <div class="video-card">
+              <a href="https://www.ejemplo3.com">
+                <div class="video-thumbnail">
+                  <img src="video2.jpg" alt="Video 2">
+                  <div class="play-button">
+                    <img src="play-icon.png" alt="Reproducir">
+                  </div>
+                </div>
+                <div class="video-info">
+                  <p class="video-title">Jefe de Homicidios de la PNP reconoce que no se respetó el protocolo en el caso de Lima</p>
+                </div>
+              </a>
+            </div>
+    
+            <div class="video-card">
+              <a href="https://www.ejemplo4.com">
+                <div class="video-thumbnail">
+                  <img src="video3.jpg" alt="Video 3">
+                  <div class="play-button">
+                    <img src="play-icon.png" alt="Reproducir">
+                  </div>
+                </div>
+                <div class="video-info">
+                  <p class="video-title">Comas: padres exigen justicia por presunto maltrato a menores cometidos</p>
+                </div>
+              </a>
+            </div>
+    
+            <div class="video-card">
+              <a href="https://www.ejemplo5.com">
+                <div class="video-thumbnail">
+                  <img src="video4.jpg" alt="Video 4">
+                  <div class="play-button">
+                    <img src="play-icon.png" alt="Reproducir">
+                  </div>
+                </div>
+                <div class="video-info">
+                  <p class="video-title">VMT: Fiscalía organiza operación contra la organización criminal</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+
+    
+
+        
+
+    
+    <script src="/JS/script.js"></script>
+</body>
+</html>

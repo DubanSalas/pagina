@@ -90,4 +90,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const moreArticles = document.getElementById('more-articles');
 
+    loadMoreBtn.addEventListener('click', () => {
+        moreArticles.classList.toggle('hidden');
+        loadMoreBtn.textContent = 
+            moreArticles.classList.contains('hidden') ? 'Ver más noticias' : 'Ver menos noticias';
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggle-read-more');
+    const extraContent = document.getElementById('extra-content');
+    
+    toggleButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+        
+        if (extraContent.style.display === "none") {
+            extraContent.style.display = "block"; // Mostrar contenido adicional
+            toggleButton.textContent = "Leer menos"; // Cambiar el texto del botón
+        } else {
+            extraContent.style.display = "none"; // Ocultar el contenido adicional
+            toggleButton.textContent = "Leer más..."; // Restaurar el texto del botón
+        }
+    });
+});

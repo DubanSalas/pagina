@@ -1,0 +1,73 @@
+/* General Body Styling */
+body {
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar-default {
+    background-color: #222; /* Dark background */
+    border: none; /* Remove border */
+    height: 60px; /* Fixed height for alignment */
+    padding: 0 20px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Separate menu items and brand */
+}
+
+/* Menu Items Styling */
+.navbar-default .nav {
+    display: flex; /* Make menu items horizontal */
+    align-items: center; /* Align links vertically */
+    list-style: none; /* Remove default list style */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+.navbar-default .nav > li {
+    margin: 0 15px; /* Add spacing between menu items */
+}
+
+.navbar-default .nav > li > a {
+    color: #fff; /* White links */
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline */
+    line-height: 60px; /* Align text vertically */
+    padding: 0;
+}
+
+/* Hover Effects */
+.navbar-default .nav > li > a:hover {
+    color: #1ee2e7; /* Light blue on hover */
+}
+
+/* Navbar Brand Styling */
+.navbar-default .navbar-brand {
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+    color: #1ee2e7; /* Light blue color */
+    font-size: 24px; /* Brand text size */
+    line-height: 60px; /* Vertically align with navbar height */
+    margin-right: 20px;
+}
+
+/* Active Link Styling */
+.navbar-default .nav > .active > a {
+    color: #fec503; /* Yellow for active link */
+    background-color: transparent;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-default {
+        flex-direction: column; /* Stack items vertically on small screens */
+        height: auto;
+    }
+
+    .navbar-default .nav {
+        justify-content: center; /* Center menu items on small screens */
+        flex-wrap: wrap; /* Allow wrapping for very small screens */
+    }
+}

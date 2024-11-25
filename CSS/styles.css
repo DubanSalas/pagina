@@ -251,9 +251,6 @@ body {
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
-
-
-
 .calendar-header {
     display: flex;
     justify-content: space-between;
@@ -288,21 +285,30 @@ body {
     color: #fff;
 }
 
-/* Contenedor de los artículos */
-.article-container {
+/* Contenedor del título y primer cuadro */
+.archivo-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espacio entre los artículos */
-    margin-top: 50px; /* Espacio superior para separar del calendario */
-    padding-left: 20px; /* Alineación con el título */
-    max-width: 100%; /* Asegura que los cuadros no se estiren más allá del límite */
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre el título y el primer cuadro */
+    margin-bottom: 20px;
 }
 
-/* Estilo para el título "Archivo" */
+/* Primer cuadro con ancho reducido */
+.first-article {
+    max-width: 700px; /* Ajusta el ancho máximo del primer cuadro */
+    width: 100%;
+}
+
+/* A partir del segundo artículo: dos columnas */
+.article-container > .article:not(:first-child) {
+    grid-column: span 1; /* Ocupa una columna */
+}
+
+/* Título principal */
 .archivo-title {
     font-size: 24px;
     color: #333;
-    margin: 40px 0 20px 20px; /* Espacio superior y debajo */
+    margin: 20px 20px;
     font-weight: bold;
 }
 
@@ -312,34 +318,48 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 70px;
-    gap: 20px; /* Espacio entre la imagen y el texto */
-    max-width: 800px; /* Controla el tamaño horizontal para que no se estiren */
-    width: 100%; /* Se adapta al tamaño del contenedor */
-    height: auto; /* Ajusta la altura al contenido */
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    flex: 1;
+    margin-top: 50px; /* Espacio superior entre cuadros */
+    width: 100%; /* Ajusta el ancho */
 }
+
+/* Parejas de artículos */
+.article-row {
+    display: flex;
+    gap: 30px; /* Espacio entre cuadros */
+}
+
 
 /* Imagen del artículo */
 .article-image {
-    width: 150px; /* Aumenta el tamaño de la imagen */
+    width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-/* Título del artículo */
-.article-text h2 {
-    font-size: 22px; /* Aumenta el tamaño de la fuente del título */
-    color: #333;
-    margin: 0 0 10px 0;
+/* Texto del artículo */
+.article-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Descripción breve */
+
+/* Texto del artículo */
+.article-text h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
 .article-text p {
-    font-size: 16px; /* Aumenta el tamaño de la fuente de la descripción */
+    font-size: 14px;
     color: #666;
-    margin: 0;
+    margin: 5px 0;
 }
 
 /* Información de tiempo */
@@ -349,12 +369,10 @@ body {
     margin-top: 5px;
 }
 
-/* Enlace "Leer más" */
 .article-more {
-    font-size: 16px; /* Aumenta el tamaño de la fuente del enlace */
+    font-size: 14px;
     color: #ffcc00;
     text-decoration: none;
-    margin-top: 10px;
 }
 
 .article-more:hover {
@@ -367,19 +385,24 @@ body {
     margin-top: 20px;
 }
 
-/* Estilo del botón de "Ver más noticias" */
+/* Botón de más noticias */
+.more-news-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .load-more-btn {
     padding: 10px 20px;
     font-size: 16px;
-    color: white;
     background-color: #ffcc00;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .load-more-btn:hover {
-    background-color: #218838;
+    background-color: #e6b800;
 }
 
 /* Ocultar artículos adicionales */
@@ -443,120 +466,3 @@ body {
 }
 
 
-/* Contenedor principal */
-.container {
-    width: 95%;
-    max-width: 1400px; /* Más grande */
-    padding: 30px;
-    background-color: #1e1e1e; /* Fondo negro */
-    border-radius: 10px;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 1400px;
-    padding: 30px;
-    background-color: #1e1e1e; /* Fondo oscuro */
-    border-radius: 10px;
-  }
-  
-  /* Encabezado centrado */
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    text-align: center; /* Centramos el texto */
-    padding-bottom: 15px;
-  }
-  
-  .header .flag {
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(to bottom, #0057b7 50%, #ffd700 50%);
-    border-radius: 50%;
-  }
-  
-  .header h1 {
-    font-size: 36px; /* Texto más grande */
-    font-weight: bold;
-    margin: 0;
-    color: #f39c12; /* Color dorado */
-  }
-  
-  .header .day {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #ccc;
-  }
-  
-  /* Videos */
-  .videos {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  /* Estilo de los videos */
-  .video-item {
-    flex: 1;
-    background-color: #222;
-    border-radius: 10px;
-    padding: 15px;
-    overflow: hidden;
-    text-decoration: none; /* Eliminar subrayado */
-    color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .video-item:hover {
-    transform: scale(1.05); /* Efecto de agrandamiento */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Sombra al pasar el mouse */
-  }
-  
-  .video-item img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .video-item h2 {
-    font-size: 20px;
-    margin: 15px 0 10px;
-    color: #f39c12; /* Color dorado */
-  }
-  
-  .video-item .author {
-    font-size: 16px;
-    color: #ff4500;
-    margin-top: 10px;
-  }
-  
-  .label.red {
-    position: absolute;
-    background-color: #ff0000;
-    color: #fff;
-    font-size: 14px;
-    padding: 4px 10px;
-    top: 15px;
-    left: 15px;
-    border-radius: 5px;
-    text-transform: uppercase;
-  }
-  
-  .duration {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-size: 14px;
-    padding: 4px 10px;
-    bottom: 15px;
-    right: 15px;
-    border-radius: 5px;
-  }

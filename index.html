@@ -25,7 +25,7 @@
             <li><a href="/Login.html">Iniciar sesión</a></li> <!-- Redirige a la página de inicio de sesión -->
         </ul>
     </div>
-   
+
     <!-- Encabezado -->
     <header class="header">
         <div class="header-left">
@@ -127,153 +127,94 @@
         </table>
     </aside>
 
-    <!-- Título "Archivo" -->
-    <h2 class="archivo-title">Archivo</h2>
+    <!-- Título principal "Archivo" -->
+<h2 class="archivo-title">Archivo</h2>
 
-    <!-- Contenedor de los artículos -->
-    <div class="article-container">
-        <!-- Primer cuadro -->
-        <div class="article">
-            <img src="https://via.placeholder.com/150" alt="Imagen 1" class="article-image">
-            <div class="article-text">
-                <h2>Título del artículo 1</h2>
-                <p>Descripción breve del artículo 1.</p>
-                <p class="article-time">Hace 42 minutos</p>
-                <a href="#" class="article-more">Leer más</a>
-            </div>
+<div class="article-container">
+    <!-- Primer cuadro: único en su fila -->
+    <div class="article first-article">
+        <img src="https://via.placeholder.com/150" alt="Imagen 1" class="article-image">
+        <div class="article-text">
+            <h2>Título del artículo 1</h2>
+            <p>Descripción breve del artículo 1.</p>
+            <p class="article-time">Hace 42 minutos</p>
+            <a href="pagina1.html" class="article-more">Leer más</a>
         </div>
+    </div>
 
-        <!-- Segundo cuadro -->
+    <!-- Parejas de cuadros -->
+    <div class="article-row">
         <div class="article">
             <img src="https://via.placeholder.com/150" alt="Imagen 2" class="article-image">
             <div class="article-text">
                 <h2>Título del artículo 2</h2>
                 <p>Descripción breve del artículo 2.</p>
                 <p class="article-time">Hace 1 hora</p>
-                <a href="#" class="article-more">Leer más</a>
+                <a href="pagina2.html" class="article-more">Leer más</a>
             </div>
         </div>
-
-        <!-- Tercer cuadro -->
         <div class="article">
             <img src="https://via.placeholder.com/150" alt="Imagen 3" class="article-image">
             <div class="article-text">
                 <h2>Título del artículo 3</h2>
                 <p>Descripción breve del artículo 3.</p>
                 <p class="article-time">Hace 2 horas</p>
-                <a href="#" class="article-more">Leer más</a>
+                <a href="pagina3.html" class="article-more">Leer más</a>
             </div>
         </div>
+    </div>
 
-        <!-- Cuarto cuadro -->
+    <div class="article-row">
         <div class="article">
             <img src="https://via.placeholder.com/150" alt="Imagen 4" class="article-image">
             <div class="article-text">
                 <h2>Título del artículo 4</h2>
                 <p>Descripción breve del artículo 4.</p>
                 <p class="article-time">Hace 3 horas</p>
-                <a href="#" class="article-more">Leer más</a>
+                <a href="pagina4.html" class="article-more">Leer más</a>
             </div>
         </div>
-
-        <!-- Quinto cuadro -->
         <div class="article">
             <img src="https://via.placeholder.com/150" alt="Imagen 5" class="article-image">
             <div class="article-text">
                 <h2>Título del artículo 5</h2>
                 <p>Descripción breve del artículo 5.</p>
                 <p class="article-time">Hace 4 horas</p>
-                <a href="#" class="article-more">Leer más</a>
+                <a href="pagina5.html" class="article-more">Leer más</a>
             </div>
         </div>
+    </div>
 
-        <!-- Sexto cuadro -->
-        <div class="article">
-            <img src="https://via.placeholder.com/150" alt="Imagen 6" class="article-image">
-            <div class="article-text">
-                <h2>Título del artículo 6</h2>
-                <p>Descripción breve del artículo 6.</p>
-                <p class="article-time">Hace 5 horas</p>
-                <a href="#" class="article-more">Leer más</a>
+    <div id="more-articles" class="hidden">
+        <div class="article-row">
+            <div class="article">
+                <img src="https://via.placeholder.com/150" alt="Imagen 6" class="article-image">
+                <div class="article-text">
+                    <h2>Título del artículo 6</h2>
+                    <p>Descripción breve del artículo 6.</p>
+                    <p class="article-time">Hace 5 horas</p>
+                    <a href="pagina6.html" class="article-more">Leer más</a>
+                </div>
             </div>
-        </div>
-
-        <!-- Artículos ocultos que aparecerán cuando se haga clic en el botón -->
-        <div id="more-articles" class="hidden">
-            <!-- Séptimo cuadro -->
             <div class="article">
                 <img src="https://via.placeholder.com/150" alt="Imagen 7" class="article-image">
                 <div class="article-text">
                     <h2>Título del artículo 7</h2>
                     <p>Descripción breve del artículo 7.</p>
                     <p class="article-time">Hace 6 horas</p>
-                    <a href="#" class="article-more">Leer más</a>
-                </div>
-            </div>
-
-            <!-- Octavo cuadro -->
-            <div class="article">
-                <img src="https://via.placeholder.com/150" alt="Imagen 8" class="article-image">
-                <div class="article-text">
-                    <h2>Título del artículo 8</h2>
-                    <p>Descripción breve del artículo 8.</p>
-                    <p class="article-time">Hace 7 horas</p>
-                    <a href="#" class="article-more">Leer más</a>
-                </div>
-            </div>
-
-            <!-- Noveno cuadro -->
-            <div class="article">
-                <img src="https://via.placeholder.com/150" alt="Imagen 9" class="article-image">
-                <div class="article-text">
-                    <h2>Título del artículo 9</h2>
-                    <p>Descripción breve del artículo 9.</p>
-                    <p class="article-time">Hace 8 horas</p>
-                    <a href="#" class="article-more">Leer más</a>
-                </div>
-            </div>
-
-            <!-- Décimo cuadro -->
-            <div class="article">
-                <img src="https://via.placeholder.com/150" alt="Imagen 10" class="article-image">
-                <div class="article-text">
-                    <h2>Título del artículo 10</h2>
-                    <p>Descripción breve del artículo 10.</p>
-                    <p class="article-time">Hace 9 horas</p>
-                    <a href="#" class="article-more">Leer más</a>
-                </div>
-            </div>
-
-            <!-- Undécimo cuadro -->
-            <div class="article">
-                <img src="https://via.placeholder.com/150" alt="Imagen 11" class="article-image">
-                <div class="article-text">
-                    <h2>Título del artículo 11</h2>
-                    <p>Descripción breve del artículo 11.</p>
-                    <p class="article-time">Hace 10 horas</p>
-                    <a href="#" class="article-more">Leer más</a>
-                </div>
-            </div>
-
-            <!-- Duodécimo cuadro -->
-            <div class="article">
-                <img src="https://via.placeholder.com/150" alt="Imagen 12" class="article-image">
-                <div class="article-text">
-                    <h2>Título del artículo 12</h2>
-                    <p>Descripción breve del artículo 12.</p>
-                    <p class="article-time">Hace 11 horas</p>
-                    <a href="#" class="article-more">Leer más</a>
+                    <a href="pagina7.html" class="article-more">Leer más</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Botón "Ver más noticias" -->
-    <div class="more-news-container">
-        <button id="load-more-btn" class="load-more-btn">Ver más noticias</button>
-    </div>
+<!-- Botón para mostrar más -->
+<div class="more-news-container">
+    <button id="load-more-btn" class="load-more-btn">Ver más noticias</button>
+</div>
 
-        <!-- Noticia" -->
+    <!-- Noticia" -->
 
     <div class="news-container">
         <h1>En el mundo</h1>
@@ -286,57 +227,33 @@
             </div>
             <!-- Noticia 2 -->
             <div class="news-item">
-                <h2>Las nueve horas que acabaron con la puesta en libertad del empresario Aldama, quien agita al Gobierno español</h2>
-                <p class="description">El rápido movimiento del abogado defensor, apoyado por la Fiscalía Anticorrupción, precipitó la salida del empresario de la cárcel.</p>
+                <h2>Las nueve horas que acabaron con la puesta en libertad del empresario Aldama, quien agita al
+                    Gobierno español</h2>
+                <p class="description">El rápido movimiento del abogado defensor, apoyado por la Fiscalía
+                    Anticorrupción, precipitó la salida del empresario de la cárcel.</p>
                 <p class="author">J. J. GÁLVEZ | Madrid</p>
             </div>
             <!-- Noticia 3 -->
             <div class="news-item">
                 <img src="universitarios.jpg" alt="Universitarios colombianos">
-                <h2>Más de 200.000 universitarios exigen al Gobierno de Colombia que desembolse los créditos que les permitirán estudiar</h2>
+                <h2>Más de 200.000 universitarios exigen al Gobierno de Colombia que desembolse los créditos que les
+                    permitirán estudiar</h2>
                 <p class="author">CAMILA OSORIO | Bogotá</p>
             </div>
             <!-- Noticia 4 -->
             <div class="news-item">
                 <h2>El avance imparable del dengue en México: el virus estalla en dos Estados clave</h2>
-                <p class="description">Hay más de 110.000 pacientes confirmados y 262 defunciones a causa de esta infección transmitida por los mosquitos 'aedes aegypti', que están llegando de forma acelerada a nuevos Estados.</p>
+                <p class="description">Hay más de 110.000 pacientes confirmados y 262 defunciones a causa de esta
+                    infección transmitida por los mosquitos 'aedes aegypti', que están llegando de forma acelerada a
+                    nuevos Estados.</p>
                 <p class="author">BEATRIZ GUILLÉN | México</p>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <!-- Encabezado -->
-        <div class="header">
-          <span class="flag"></span>
-          <h1>Guerra en Ucrania</h1>
-          <span class="day">Día 1.005</span>
-        </div>
-    
-        <!-- Sección de videos -->
-        <div class="videos">
-          <!-- Video 1 -->
-          <a href="https://example.com/zelenski" target="_blank" class="video-item">
-            <img src="video1.jpg" alt="Zelenski guerra 2025">
-            <div class="label red">DIRECTO</div>
-            <h2>Zelenski cree que hay posibilidades de poner fin a la guerra en 2025</h2>
-            <p class="author">V.J. CASTAÑO</p>
-          </a>
-          <!-- Video 2 -->
-          <a href="https://example.com/putin" target="_blank" class="video-item">
-            <img src="video2.jpg" alt="Putin misil hipersónico">
-            <div class="duration">01:30 min</div>
-            <h2>Putin anuncia la producción en serie del misil hipersónico Oréshnik</h2>
-          </a>
-          <!-- Video 3 -->
-          <a href="https://example.com/biden" target="_blank" class="video-item">
-            <img src="video3.jpg" alt="Biden armas Ucrania">
-            <div class="duration">01:31 min</div>
-            <h2>Biden refuerza con más armas a Ucrania antes de la llegada de Trump a la Casa Blanca</h2>
-          </a>
-        </div>
-      </div>
-    
+
+
     <script src="/JS/script.js"></script>
 </body>
+
 </html>

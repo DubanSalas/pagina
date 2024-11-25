@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noticia</title>
+    <link rel="stylesheet" href="/CSS/videos.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+
+<body>
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <ul>
+            <li><a href="#">Últimas Noticias</a></li>
+            <li><a href="#">Actualidad</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Tecnología</a></li>
+            <li><a href="#">Más</a></li>
+            <li><a href="#">Sintoniza tu región</a></li>
+            <li><a href="#">Podcasts</a></li>
+            <!-- Agregar "Iniciar sesión" -->
+            <li><a href="/Login.html">Iniciar sesión</a></li> <!-- Redirige a la página de inicio de sesión -->
+        </ul>
+    </div>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="header-left">
+            <!-- Botón de menú -->
+            <button class="menu-button" onclick="toggleMenu()">☰ Menú</button>
+            <!-- Buscar -->
+            <form class="search-form" onsubmit="performSearch(event)">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button type="submit"></button>
+            </form>
+        </div>
+        <div class="header-center">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="circle"></div>
+                <span>RPP</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <!-- En vivo -->
+            <button class="live-button">
+                <img src="https://via.placeholder.com/40" alt="Audio" class="live-icon">
+                <div class="live-text">
+                    <span>En vivo</span>
+                    <strong>Noticia</strong>
+                </div>
+                <div class="play-button">▶</div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menú lateral -->
+    <div id="side-menu" class="side-menu">
+        <div class="menu-header">
+            <button class="close-button" onclick="toggleMenu()">✖</button>
+        </div>
+        <div class="menu-content">
+            <!-- Logo centrado -->
+            <div class="menu-logo">
+                <div class="circle"></div>
+                <span>RPP</span>
+            </div>
+
+            <!-- Texto centrado de redes sociales -->
+            <div class="social-section">
+                <p>Síguenos en redes sociales</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon tiktok">🎵</a>
+                    <a href="#" class="social-icon instagram">📸</a>
+                    <a href="#" class="social-icon facebook">📘</a>
+                    <a href="#" class="social-icon youtube">🎥</a>
+                </div>
+            </div>
+
+            <!-- Botones de WhatsApp -->
+            <button class="whatsapp-button">🟢 Únete a nuestro canal en WhatsApp</button>
+            <button class="sports-button">🔵 Únete a nuestro canal de Deportes</button>
+
+            <!-- Secciones con fondo gris solo hasta Fútbol -->
+            <div class="sections-box">
+                <h3>Secciones</h3>
+                <ul class="sections-list">
+                    <li>Últimas noticias <span class="arrow">›</span></li>
+                    <li>Política <span class="arrow">›</span></li>
+                    <li>Lima <span class="arrow">›</span></li>
+                    <li>Perú <span class="arrow">›</span></li>
+                    <li>Fútbol <span class="arrow">›</span></li>
+                </ul>
+            </div>
+
+            <!-- Secciones sin fondo gris -->
+            <ul class="sections-list">
+                <li>Otras noticias <span class="arrow">›</span></li>
+                <li>Internacionales <span class="arrow">›</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="featured-articles">
+            <div class="featured-article">
+                <img src="https://via.placeholder.com/600x400" alt="Mega Millions">
+                <div class="article-content">
+                    <span class="badge">CONTEÚDO DE MARCA</span>
+                    <h2>Quem será o sortudo que ganhará os R$ 6 bilhões da Mega Millions?</h2>
+                    <p>Descubra mais sobre o sorteio milionário que está movimentando o país</p>
+                </div>
+            </div>
+            <div class="featured-article">
+                <img src="https://via.placeholder.com/600x400" alt="Caravana das Periferias">
+                <div class="article-content">
+                    <span class="badge">CONTEÚDO DE MARCA</span>
+                    <h2>Caravana das Periferias chega ao Recife e lança prêmio para comunidades de todo o País</h2>
+                    <p>Iniciativa busca fortalecer projetos comunitários em todo o Brasil</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-grid">
+            <div class="article">
+                <img src="https://via.placeholder.com/300x200" alt="Notícia Política">
+                <div class="article-content">
+                    <span class="badge">POLÍTICA</span>
+                    <h3>CPMI do 8 de Janeiro aprova a convocação do hacker Walter Delgatti</h3>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://via.placeholder.com/300x200" alt="Notícia Entretenimento">
+                <div class="article-content">
+                    <span class="badge">NOTÍCIAS</span>
+                    <h3>Cinco curiosidades sobre Gal Gadot, atriz confirmada para 'Mulher-Maravilha 3'</h3>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://via.placeholder.com/300x200" alt="Notícia Tecnologia">
+                <div class="article-content">
+                    <span class="badge">NOTÍCIAS</span>
+                    <h3>Detran-SP concede placa verde para modelos da Trelus Motors</h3>
+                </div>
+            </div>
+            <div class="article">
+                <img src="https://via.placeholder.com/300x200" alt="Notícia Cidade">
+                <div class="article-content">
+                    <span class="badge">CIDADES</span>
+                    <h3>Mogi das Cruzes lança três editais da Lei Paulo Gustavo, com R$ 3,4 milhões</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vp-container">
+        <header>
+            <h1>MUNDO</h1>
+        </header>
+        <main>
+            <div class="vp-video-player">
+                <h2>Camera de segurança flagra boneca conhecida como ...</h2>
+                <div class="vp-video-container">
+                    <img src="https://via.placeholder.com/800x450" alt="Vídeo principal" class="vp-main-video">
+                    <div class="vp-video-controls">
+                        <span class="vp-time-display">00:00 / 00:43</span>
+                        <div class="vp-progress-bar">
+                            <div class="vp-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vp-playlist">
+                <h3>Assistindo 1 de 45 vídeos</h3>
+                <div class="vp-playlist-controls">
+                    <button class="vp-prev-btn">&lt;</button>
+                    <button class="vp-next-btn">&gt;</button>
+                </div>
+                <ul class="vp-video-list">
+                    <li class="vp-video-item" data-url="https://exemplo.com/video1">
+                        <img src="https://via.placeholder.com/120x68" alt="Vídeo 1">
+                        <div class="vp-video-info">
+                            <span class="vp-video-duration">00:43</span>
+                            <p>Camera de segurança flagra boneca conhecida como ...</p>
+                        </div>
+                    </li>
+                    <li class="vp-video-item" data-url="https://exemplo.com/video2">
+                        <img src="https://via.placeholder.com/120x68" alt="Vídeo 2">
+                        <div class="vp-video-info">
+                            <span class="vp-video-duration">00:52</span>
+                            <p>Padre expulsa, aos gritos, padrinho de batizado no ...</p>
+                        </div>
+                    </li>
+                    <li class="vp-video-item" data-url="https://exemplo.com/video3">
+                        <img src="https://via.placeholder.com/120x68" alt="Vídeo 3">
+                        <div class="vp-video-info">
+                            <span class="vp-video-duration">01:03</span>
+                            <p>Advogado do PT celebra decisão do TSE de tornar Luciano ...</p>
+                        </div>
+                    </li>
+                    <li class="vp-video-item" data-url="https://exemplo.com/video4">
+                        <img src="https://via.placeholder.com/120x68" alt="Vídeo 4">
+                        <div class="vp-video-info">
+                            <span class="vp-video-duration">00:50</span>
+                            <p>Representante ucraniano soca russo após ter bandeira do ...</p>
+                        </div>
+                    </li>
+                    <li class="vp-video-item" data-url="https://exemplo.com/video5">
+                        <img src="https://via.placeholder.com/120x68" alt="Vídeo 5">
+                        <div class="vp-video-info">
+                            <span class="vp-video-duration">01:16</span>
+                            <p>Alexandre de Moraes ironiza Andre Mendonça durante ...</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+
+    <div class="news-container">
+        <!-- Artículo destacado -->
+        <div class="featured-news">
+            <a href="https://www.ejemplo.com/destacado" target="_blank">
+                <img src="https://via.placeholder.com/600x400" alt="Imagen destacada">
+                <div class="featured-content">
+                    <span class="badge">JUSTICIA</span>
+                    <h2>PF realiza operação contra esquema de desmatamento na Amazônia</h2>
+                </div>
+            </a>
+        </div>
+    
+        <!-- Grid de artículos secundarios -->
+        <div class="news-grid">
+            <a href="https://www.ejemplo.com/noticia1" target="_blank" class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Noticia">
+                <div class="news-content">
+                    <span class="badge">BRASIL</span>
+                    <p>'Deep tech': o que é tecnologia profunda e por que Brasil está em 2º em ranking latino</p>
+                </div>
+            </a>
+            <a href="https://www.ejemplo.com/noticia2" target="_blank" class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Noticia">
+                <div class="news-content">
+                    <span class="badge">NOTICIAS</span>
+                    <p>Destinos Inteligentes é selecionada pelo EmbraturLab</p>
+                </div>
+            </a>
+            <a href="https://www.ejemplo.com/noticia3" target="_blank" class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Noticia">
+                <div class="news-content">
+                    <span class="badge">NOTICIAS</span>
+                    <p>Alemanha é eliminada da Copa do Mundo feminina</p>
+                </div>
+            </a>
+            <a href="https://www.ejemplo.com/noticia4" target="_blank" class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Noticia">
+                <div class="news-content">
+                    <span class="badge">MUNDO</span>
+                    <p>Cordilheira no Chile marca 37ºC no inverno, calor recorde em 70 anos</p>
+                </div>
+            </a>
+            <a href="https://www.ejemplo.com/noticia5" target="_blank" class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Noticia">
+                <div class="news-content">
+                    <span class="badge">NOTICIAS</span>
+                    <p>Aprendi, com meus alunos, o impacto da pandemia na educação</p>
+                </div>
+            </a>
+            <a href="https://www.ejemplo.com/noticia6" target="_blank" class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Noticia">
+                <div class="news-content">
+                    <span class="badge">MUNDO</span>
+                    <p>Líder de golpe no Níger se encontra com aliados do Grupo Wagner</p>
+                </div>
+            </a>
+
+    <script src="/JS/videos.js"></script>
+    <script src="/JS/script.js"></script>
+</body>
+
+</html>
